@@ -9,7 +9,7 @@ class HalamanUtama extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: GradientContainer(
-        warna1: const Color.fromARGB(255, 60, 101, 252),
+        warna1: Color.fromARGB(255, 60, 143, 252),
         warna2: const Color.fromARGB(255, 20, 1, 50),
         child: Padding(
           padding: const EdgeInsets.all(10.0),
