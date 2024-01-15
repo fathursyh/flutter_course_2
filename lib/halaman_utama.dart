@@ -2,7 +2,8 @@ import 'package:buat_git/custom_widget/text_custom.dart';
 import 'package:flutter/material.dart';
 
 class HalamanUtama extends StatelessWidget {
-  const HalamanUtama({super.key});
+  const HalamanUtama(this.startQuiz, {super.key});
+  final void Function() startQuiz;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class HalamanUtama extends StatelessWidget {
                       textStyle: const TextStyle(fontSize: 20),
                       fixedSize: const Size(180, 60),
                       foregroundColor: Colors.greenAccent),
-                  onPressed: () {},
+                  onPressed: startQuiz,
                   label: const Text(
                     'Start Quiz',
                   )),
