@@ -19,7 +19,7 @@ class HalamanUtama extends StatelessWidget {
           const SizedBox(
             height: 25,
           ),
-          const TextCustom('Lets Play Flutter Quiz!', 20),
+          const TextCustom('Lets Play Fathur\'s Quiz!', 20),
           const SizedBox(
             height: 60,
           ),
