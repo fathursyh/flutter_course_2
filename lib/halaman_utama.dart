@@ -30,7 +30,7 @@ class HalamanUtama extends StatelessWidget {
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     elevation: 8,
-                    fixedSize: Size(180, 60),
+                    fixedSize: const Size(180, 60),
                   ),
                   onPressed: () {},
                   child: const Text(
