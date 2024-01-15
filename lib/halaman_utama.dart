@@ -1,5 +1,5 @@
-import 'package:buat_git/custom/gradient_container.dart';
-import 'package:buat_git/custom/text_custom.dart';
+import 'package:buat_git/custom_widget/gradient_container.dart';
+import 'package:buat_git/custom_widget/text_custom.dart';
 import 'package:flutter/material.dart';
 
 class HalamanUtama extends StatelessWidget {
@@ -9,8 +9,9 @@ class HalamanUtama extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: GradientContainer(
-        warna1: Color.fromARGB(255, 60, 143, 252),
+        warna1: const Color.fromARGB(255, 60, 143, 252),
         warna2: const Color.fromARGB(255, 20, 1, 50),
+        warna3: const Color.fromARGB(255, 88, 0, 41),
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Center(
@@ -28,6 +29,7 @@ class HalamanUtama extends StatelessWidget {
               ),
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
+                    elevation: 8,
                     fixedSize: Size(180, 60),
                   ),
                   onPressed: () {},
