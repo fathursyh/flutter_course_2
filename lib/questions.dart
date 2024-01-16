@@ -16,27 +16,33 @@ class _QuestionState extends State<Questions> {
   Widget build(context) {
     final currentQuestion = questions[0];
 
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Text(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 40),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          const SizedBox(
+            height: 50,
+          ),
+          Text(
               textAlign: TextAlign.center,
               currentQuestion.text,
               style: const TextStyle(
                 color: Colors.white,
                 fontSize: 22,
               )),
-        ),
-        const SizedBox(
-          height: 60,
-        ),
-        ...currentQuestion.answers.map((answer) {
-          return AnswerButton(teks: answer, klikPilih: () {});
-        }),
-      ],
+          const SizedBox(
+            height: 60,
+          ),
+          ...currentQuestion.getShuffledAnswers().map((answer) {
+            return Container(
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+                child: AnswerButton(teks: answer, klikPilih: () {}));
+          }),
+        ],
+      ),
     );
   }
 }
