@@ -5,8 +5,7 @@ const questions = [
       ['Rara', 'Abian', 'Nunu', 'Danang']),
   QuizQuestion(
       'Apa bahasa favorit fathur?', ['Javascript', 'Python', 'Java', 'C#']),
-  QuizQuestion('Kuliah dimana fathur?',
-      ['Universitas Pakuan', 'Universitas Gunadarma', 'IPB', 'ITB']),
+  QuizQuestion('Kuliah dimana fathur?', ['Pakuan', 'Gunadarma', 'IPB', 'ITB']),
   QuizQuestion('Apa makanan kesukaan fathur?',
       ['Burger', 'Spaghetti', 'Pizza', 'Mie Goreng']),
 ];

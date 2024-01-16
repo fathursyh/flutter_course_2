@@ -12,12 +12,15 @@ class AnswerButton extends StatelessWidget {
           textStyle: const TextStyle(fontSize: 20),
           fixedSize: const Size(170, 60),
           padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
-          backgroundColor: Color.fromARGB(255, 33, 3, 92),
+          backgroundColor: const Color.fromARGB(255, 33, 3, 92),
           foregroundColor: Colors.white,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))),
       onPressed: klikPilih,
-      child: Text(teks),
+      child: Text(
+        teks,
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }
