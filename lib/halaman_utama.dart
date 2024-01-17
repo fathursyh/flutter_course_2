@@ -11,10 +11,13 @@ class HalamanUtama extends StatelessWidget {
       padding: const EdgeInsets.all(10.0),
       child: Center(
         child: Column(mainAxisSize: MainAxisSize.min, children: [
-          Image.asset(
-            'assets/images/quiz-logo.png',
-            width: 280,
-            color: const Color.fromARGB(150, 255, 255, 255),
+          ClipOval(
+            child: Image.asset(
+              'assets/images/fathur.jpg',
+              opacity: const AlwaysStoppedAnimation(0.8),
+              semanticLabel: 'Ganteng',
+              width: 280,
+            ),
           ),
           const SizedBox(
             height: 25,

@@ -10,6 +10,7 @@ class TextCustomDua extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       teks,
+      textAlign: TextAlign.left,
       style: TextStyle(color: color, fontSize: size),
     );
   }

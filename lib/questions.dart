@@ -1,5 +1,5 @@
 import 'package:buat_git/custom_widget/answer_button.dart';
-import 'package:buat_git/data/dummy_questions.dart';
+import 'package:buat_git/data/questions_list.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

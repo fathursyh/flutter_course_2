@@ -9,7 +9,11 @@ class TextCustom extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       teks,
-      style: TextStyle(color: Colors.white, fontSize: size),
+      textAlign: TextAlign.start,
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: size,
+      ),
     );
   }
 }

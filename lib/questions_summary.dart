@@ -1,6 +1,7 @@
-import 'package:buat_git/custom_widget/text_custom.dart';
 import 'package:buat_git/custom_widget/text_custom_2.dart';
+import 'package:buat_git/summary_number.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class QuestionSumary extends StatelessWidget {
   const QuestionSumary(this.summaryData, {super.key});
@@ -9,26 +10,47 @@ class QuestionSumary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 300,
+      height: 340,
       child: SingleChildScrollView(
         child: Column(
           // PELAJARI
           children: summaryData.map((index) {
+            bool getCorrectAnswer() {
+              if (index['jawaban_kamu'] == index['jawaban_benar']) {
+                return true;
+              } else {
+                return false;
+              }
+            }
+
             return Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TextCustom(((index['nomor_pertanyaan'] as int) + 1).toString(),
-                    15), // INI PENTING BUAT DIPELAJARIN
+                SummaryNumber(
+                    index: index['nomor_pertanyaan'] as int,
+                    correct:
+                        getCorrectAnswer()), // INI PENTING BUAT DIPELAJARIN
+                const SizedBox(
+                  width: 20,
+                ),
                 Expanded(
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      TextCustom(index['questions'] as String, 20),
+                      Text(
+                        index['questions'] as String,
+                        style: GoogleFonts.lexend(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
+                      ),
                       const SizedBox(
                         height: 5,
                       ),
-                      TextCustomDua(
-                          index['jawaban_benar'] as String, 20, Colors.green),
-                      TextCustomDua(
-                          index['jawaban_kamu'] as String, 20, Colors.red),
+                      TextCustomDua(index['jawaban_benar'] as String, 16,
+                          const Color.fromARGB(200, 255, 255, 255)),
+                      TextCustomDua(index['jawaban_kamu'] as String, 16,
+                          getCorrectAnswer() ? Colors.green : Colors.red),
                     ],
                   ),
                 ),

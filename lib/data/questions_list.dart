@@ -8,4 +8,8 @@ const questions = [
   QuizQuestion('Kuliah dimana fathur?', ['Pakuan', 'Gunadarma', 'IPB', 'ITB']),
   QuizQuestion('Apa makanan kesukaan fathur?',
       ['Burger', 'Spaghetti', 'Pizza', 'Mie Goreng']),
+  QuizQuestion('Apa hewan kesukaan Fathur?',
+      ['Kucing', 'Anjing', 'Kura-kura', 'Biawak']),
+  QuizQuestion('Platform gaming kesukaan Fathur?',
+      ['Komputer', 'Xbox', 'Playstation', 'Switch']),
 ];
