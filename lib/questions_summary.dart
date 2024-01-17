@@ -1,3 +1,5 @@
+import 'package:buat_git/custom_widget/text_custom.dart';
+import 'package:buat_git/custom_widget/text_custom_2.dart';
 import 'package:flutter/material.dart';
 
 class QuestionSumary extends StatelessWidget {
@@ -14,19 +16,19 @@ class QuestionSumary extends StatelessWidget {
           children: summaryData.map((index) {
             return Row(
               children: [
-                Text(((index['nomor_pertanyaan'] as int) + 1)
-                    .toString()), // INI PENTING BUAT DIPELAJARIN
+                TextCustom(((index['nomor_pertanyaan'] as int) + 1).toString(),
+                    15), // INI PENTING BUAT DIPELAJARIN
                 Expanded(
                   child: Column(
                     children: [
-                      Text(
-                        index['questions'] as String,
-                      ),
+                      TextCustom(index['questions'] as String, 20),
                       const SizedBox(
                         height: 5,
                       ),
-                      Text(index['jawaban_benar'] as String),
-                      Text(index['jawaban_kamu'] as String)
+                      TextCustomDua(
+                          index['jawaban_benar'] as String, 20, Colors.green),
+                      TextCustomDua(
+                          index['jawaban_kamu'] as String, 20, Colors.red),
                     ],
                   ),
                 ),
