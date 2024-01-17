@@ -29,7 +29,6 @@ class _QuizState extends State<Quiz> {
     if (selectedAnswers.length == questions.length) {
       setState(() {
         activeScreen = 'result';
-        selectedAnswers = [];
       });
     }
   }
@@ -37,15 +36,19 @@ class _QuizState extends State<Quiz> {
   @override
   Widget build(context) {
     return Scaffold(
-        body: GradientContainer(
-            warna1: const Color.fromARGB(255, 60, 143, 252),
-            warna2: const Color.fromARGB(255, 40, 9, 91),
-            child: activeScreen == 'home'
-                ? HalamanUtama(switchScreen)
-                : activeScreen == 'quiz'
-                    ? Questions(
-                        pilihJawaban: pilihJawaban,
-                      )
-                    : const ResultScreen()));
+      body: GradientContainer(
+        warna1: const Color.fromARGB(255, 60, 143, 252),
+        warna2: const Color.fromARGB(255, 40, 9, 91),
+        child: activeScreen == 'home'
+            ? HalamanUtama(switchScreen)
+            : activeScreen == 'quiz'
+                ? Questions(
+                    pilihJawaban: pilihJawaban,
+                  )
+                : ResultScreen(
+                    result: selectedAnswers,
+                  ),
+      ),
+    );
   }
 }
