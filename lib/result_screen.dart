@@ -37,7 +37,7 @@ class ResultScreen extends StatelessWidget {
     final kondisiWarna =
         numCorrectAnswer > (numTotalQuestion / 2) ? true : false;
     return GradientContainer(
-      warna1: Color.fromARGB(255, 11, 10, 91),
+      warna1: const Color.fromARGB(255, 11, 10, 91),
       warna2: kondisiWarna
           ? const Color.fromARGB(255, 15, 62, 16)
           : const Color.fromARGB(255, 94, 19, 14),
@@ -64,7 +64,7 @@ class ResultScreen extends StatelessWidget {
             ),
             TextButton.icon(
                 style: const ButtonStyle(
-                    foregroundColor: MaterialStatePropertyAll(
+                    foregroundColor: WidgetStatePropertyAll(
                         Color.fromARGB(255, 73, 122, 255))),
                 icon: const Icon(Icons.refresh),
                 onPressed: onRestart,

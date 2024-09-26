@@ -22,7 +22,7 @@ class HalamanUtama extends StatelessWidget {
           const SizedBox(
             height: 25,
           ),
-          const TextCustom('Lets Play Fathur\'s Quiz!', 20),
+          const TextCustom('Lets Play Fathur\'s Quiz!', 26),
           const SizedBox(
             height: 60,
           ),
