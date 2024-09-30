@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TextCustomDua extends StatelessWidget {
   const TextCustomDua(this.teks, this.size, this.color, {super.key});
@@ -11,7 +12,7 @@ class TextCustomDua extends StatelessWidget {
     return Text(
       teks,
       textAlign: TextAlign.left,
-      style: TextStyle(color: color, fontSize: size),
+      style: GoogleFonts.poppins(color: color, fontSize: size),
     );
   }
 }

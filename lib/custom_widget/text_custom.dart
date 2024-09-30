@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TextCustom extends StatelessWidget {
   const TextCustom(this.teks, this.size, {super.key});
@@ -10,10 +11,7 @@ class TextCustom extends StatelessWidget {
     return Text(
       teks,
       textAlign: TextAlign.start,
-      style: TextStyle(
-        color: Colors.white,
-        fontSize: size,
-      ),
+      style: GoogleFonts.poppins(color: Colors.white, fontSize: size),
     );
   }
 }
